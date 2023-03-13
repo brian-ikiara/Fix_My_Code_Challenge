@@ -1,6 +1,7 @@
+#!/usr/bin/env ruby
 ###
 #
-#  Sort integer arguments (ascending) 
+#  Sort integer arguments (ascending)
 #
 ###
 
@@ -16,7 +17,7 @@ ARGV.each do |arg|
     is_inserted = false
     i = 0
     l = result.size
-    while !is_inserted && i < l do
+    while !is_inserted && i < l
         if result[i] < i_arg
             i += 1
         else
@@ -25,7 +26,7 @@ ARGV.each do |arg|
             break
         end
     end
-    result << i_arg if !is_inserted
+    result << i_arg unless is_inserted
 end
 
 puts result
